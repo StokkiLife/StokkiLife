@@ -16,11 +16,15 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgb(#9ac41f);
             padding: 32px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .login-logo img {
+        .login-logo, img {
             width: 120px;
             margin-bottom: 12px;
             border-radius: 24px;
+            text-align: center;
         }
         .login-title {
             font-size: 1.5rem;
@@ -33,7 +37,7 @@
             margin-bottom: 18px;
         }
         .form-control input {
-            width: 100%;
+            width: 90%;
             padding: 8px 12px;
             border: 1px solid #9ac41f;
             border-radius: 5px;
