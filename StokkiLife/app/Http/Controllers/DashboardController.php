@@ -20,11 +20,11 @@ class DashboardController extends Controller
         // A lógica completa será adicionada quando criarmos as views.
         
         // Exemplo de como seria a lógica:
-        // $products = Product::all();
-        // $sales = Sale::whereDate('data_venda', today())->get();
+        $products = Product::all();
+        $sales = Sale::whereDate('data_venda', today())->get();
         
-        // return view('dashboard', compact('products', 'sales'));
+        return view('dashboard', compact('products', 'sales'));
         
-        return "Página do Dashboard - Controller a funcionar!";
+        return "<a href={{ route('dashboard') }}";
     }
 }

@@ -18,3 +18,42 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+/* ----------------------------------- */ 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SaleController;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+// Rota principal, que mostra uma página de boas-vindas ou a de login
+Route::get('/', function () {
+    return "Página Inicial do Stokki-Life";
+});
+
+// --- ROTAS DA APLICAÇÃO ---
+// Estas rotas só devem ser acessíveis depois do login.
+// O "middleware('auth')" garante isso.
+
+Route::middleware(['auth'])->group(function () {
+    // Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Produtos (Stokki)
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+
+    // Vendas (Acessos)
+    Route::get('/sales', [SaleController::class, 'index'])->name('sales.index'); // Listar vendas
+    Route::get('/sales/create', [SaleController::class, 'create'])->name('sales.create'); // Formulário de nova venda
+    Route::post('/sales', [SaleController::class, 'store'])->name('sales.store'); // Salvar a nova venda
+});

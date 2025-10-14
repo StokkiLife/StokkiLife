@@ -17,8 +17,8 @@ class SaleController extends Controller
     public function index()
     {
         // Lógica para listar todas as vendas (acessos)
-        // $sales = Sale::with('items.product')->latest()->get();
-        // return view('sales.index', compact('sales'));
+        $sales = Sale::with('items.product')->latest()->get();
+        return view('sales.index', compact('sales'));
         return "Página de Listagem de Vendas (Acessos) - Controller a funcionar!";
     }
 
@@ -30,8 +30,8 @@ class SaleController extends Controller
     public function create()
     {
         // Mostra o formulário de registo de venda
-        // $products = Product::all();
-        // return view('sales.create', compact('products'));
+        $products = Product::all();
+        return view('sales.create', compact('products'));
         return "Formulário para Registar Nova Venda";
     }
 
@@ -44,9 +44,9 @@ class SaleController extends Controller
     public function store(Request $request)
     {
         // Lógica completa para salvar uma venda, dar baixa no stock, etc.
-        // DB::transaction(function () use ($request) {
+        DB::transaction(function () use ($request) {
         //     // ... lógica aqui ...
-        // });
+     });
         return "Venda registada com sucesso! (Simulação)";
     }
 }
