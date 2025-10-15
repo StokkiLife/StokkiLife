@@ -19,7 +19,7 @@ class LoginController extends Controller
         // Valida os dados da requisição (e-mail e senha)
         $credentials = $request->validate([
             'email' => ['required', 'email'],
-            'password' => ['required'],
+            'senha' => ['required'],
         ]);
 
         // Tenta autenticar o usuário

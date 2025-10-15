@@ -24,7 +24,5 @@ class DashboardController extends Controller
         $sales = Sale::whereDate('data_venda', today())->get();
         
         return view('dashboard', compact('products', 'sales'));
-        
-        return "<a href={{ route('dashboard') }}";
-    }
+        }
 }

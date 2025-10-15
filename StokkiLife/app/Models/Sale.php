@@ -14,7 +14,7 @@ class Sale extends Model
      *
      * @var string
      */
-    protected $table = 'venda';
+    protected $table = 'sale';
 
     /**
      * Os atributos que podem ser preenchidos em massa (Mass Assignment).
@@ -23,11 +23,11 @@ class Sale extends Model
      * @var array
      */
     protected $fillable = [
-        'product_id',
-        'quantity',
-        'total_price',
-        'data_venda', // Esta coluna é usada no seu Controller de exemplo
-        // adicione outras colunas da tabela de vendas
+        'id_produto',
+        'quantidade',
+        'preco_total',
+        'venda_data',
+        // podemos adicionar mais colunas (opcional)
     ];
 
     /**
@@ -37,7 +37,7 @@ class Sale extends Model
      * @var array
      */
     protected $casts = [
-        'data_venda' => 'datetime',
+        'venda_data' => 'datetime',
     ];
 
     // Se houverem relacionamentos, eles virão aqui (ex: uma venda pertence a um produto)

@@ -35,11 +35,6 @@ use App\Http\Controllers\SaleController;
 |
 */
 
-// Rota principal, que mostra uma página de boas-vindas ou a de login
-Route::get('/', function () {
-    return "Página Inicial do Stokki-Life";
-});
-
 // --- ROTAS DA APLICAÇÃO ---
 // Estas rotas só devem ser acessíveis depois do login.
 // O "middleware('auth')" garante isso.

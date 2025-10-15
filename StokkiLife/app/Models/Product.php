@@ -23,10 +23,9 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
-        'price',
-        'stock_quantity',
-        // adicione outras colunas da tabela de produtos
+        'nome',
+        'preco_produto',
+        'quant_estoque',
     ];
 
     // Se houverem relacionamentos, eles virão aqui (ex: um produto tem muitas vendas)
