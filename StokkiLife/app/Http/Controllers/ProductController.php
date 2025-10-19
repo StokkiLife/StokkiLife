@@ -15,9 +15,8 @@ class ProductController extends Controller
     public function index()
     {
         // Lógica para listar todos os produtos
-        $products = Product::all();
-        return view('products.index', compact('products'));
-        return "Página de Listagem de Produtos - Controller a funcionar!";
+        $product = Product::all();
+        return view('products.index', compact('product'));
     }
 
     /**

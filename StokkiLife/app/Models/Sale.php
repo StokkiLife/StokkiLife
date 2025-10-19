@@ -37,7 +37,7 @@ class Sale extends Model
      * @var array
      */
     protected $casts = [
-        'venda_data' => 'datetime',
+        'venda_data' => 'datetime', //detalhe despercebido
     ];
 
     // Se houverem relacionamentos, eles virão aqui (ex: uma venda pertence a um produto)

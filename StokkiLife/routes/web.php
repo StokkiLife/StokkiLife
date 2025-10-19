@@ -44,11 +44,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // Produtos (Stokki)
-    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+    Route::get('/product', [ProductController::class, 'index'])->name('products.index');
+    Route::post('/product', [ProductController::class, 'store'])->name('products.store');
 
     // Vendas (Acessos)
-    Route::get('/sales', [SaleController::class, 'index'])->name('sales.index'); // Listar vendas
-    Route::get('/sales/create', [SaleController::class, 'create'])->name('sales.create'); // Formulário de nova venda
-    Route::post('/sales', [SaleController::class, 'store'])->name('sales.store'); // Salvar a nova venda
+    Route::get('/sale', [SaleController::class, 'index'])->name('sales.index'); // Listar vendas
+    Route::get('/sale/create', [SaleController::class, 'create'])->name('sales.create'); // Formulário de nova venda
+    Route::post('/sale', [SaleController::class, 'store'])->name('sales.store'); // Salvar a nova venda
 });

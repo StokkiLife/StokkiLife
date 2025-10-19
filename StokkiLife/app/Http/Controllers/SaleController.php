@@ -30,8 +30,8 @@ class SaleController extends Controller
     public function create()
     {
         // Mostra o formulário de registo de venda
-        $products = Product::all();
-        return view('sales.create', compact('products'));
+        $product = Product::all();
+        return view('sales.create', compact('product'));
         return "Formulário para Registar Nova Venda";
     }
 

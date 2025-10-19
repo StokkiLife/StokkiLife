@@ -1,3 +1,9 @@
+{{-- no arquivo login, quando o usuario tenta entrar com as credenciais corretas,
+aparece uma mensagem de erro se as credenciais estiverem incorretas. 
+Então, o usuario terá que registrar uma conta nova para ter acesso a dashboard.
+Porém, a conta registrada vai direto para o dashboard. --}}
+
+
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf
