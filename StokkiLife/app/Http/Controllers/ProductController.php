@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
         // Lógica para listar todos os produtos
         $product = Product::all();
-        return view('products.index', compact('product'));
+        return view('product.index', compact('product'));
     }
 
     /**
@@ -29,7 +29,6 @@ class ProductController extends Controller
     {
         // Lógica para salvar um novo produto no banco de dados
         Product::create($request->all());
-        return redirect()->route('products.index');
-        return "Produto criado com sucesso! (Simulação)";
+        return redirect()->route('product.index')->with('success', 'Produto criado com sucesso!');
     }
 }

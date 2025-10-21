@@ -26,7 +26,9 @@ class Sale extends Model
         'id_produto',
         'quantidade',
         'preco_total',
-        'venda_data',
+        'data_venda',
+        'created_at',
+        'updated_at',
         // podemos adicionar mais colunas (opcional)
     ];
 

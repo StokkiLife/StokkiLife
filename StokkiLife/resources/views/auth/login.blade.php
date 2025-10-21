@@ -1,6 +1,9 @@
 <x-guest-layout>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('stylesheet/stokkilifeLogin.css') }}">
+    <link rel="stylesheet" href="{{ asset('stylesheet/stokkilifeLogin.css') }}"> 
+    <link rel="icon" href="{{ asset('imgs/stokkilife-logo.png') }}">
+
+
     <body>
     <div class="login-container">
         <div class="login-logo">

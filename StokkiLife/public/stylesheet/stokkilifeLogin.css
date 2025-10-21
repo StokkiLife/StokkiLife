@@ -1,3 +1,6 @@
+/* login.blade.php CSS */
+
+@import "tailwindcss";
 body {
     background: linear-gradient(#9ac41f, #a6d223, #9ac41f);
     min-height: 100vh;

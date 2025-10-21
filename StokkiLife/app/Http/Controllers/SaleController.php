@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Sale;
 use App\Models\SaleItem;
 use App\Models\Product;
@@ -13,13 +14,12 @@ class SaleController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\View\View
-     */
     public function index()
     {
         // Lógica para listar todas as vendas (acessos)
-        $sales = Sale::with('items.product')->latest()->get();
-        return view('sales.index', compact('sales'));
-        return "Página de Listagem de Vendas (Acessos) - Controller a funcionar!";
+        $sale = Sale::with('item.product')->latest()->get();
+        return view('sale.index', compact('sale'));
+    }
     }
 
     /**
@@ -31,8 +31,7 @@ class SaleController extends Controller
     {
         // Mostra o formulário de registo de venda
         $product = Product::all();
-        return view('sales.create', compact('product'));
-        return "Formulário para Registar Nova Venda";
+        return view('sale.create', compact('product'));
     }
 
     /**
@@ -45,7 +44,7 @@ class SaleController extends Controller
     {
         // Lógica completa para salvar uma venda, dar baixa no stock, etc.
         DB::transaction(function () use ($request) {
-        //     // ... lógica aqui ...
+            // ... lógica aqui ...
      });
         return "Venda registada com sucesso! (Simulação)";
     }

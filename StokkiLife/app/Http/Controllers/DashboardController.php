@@ -21,7 +21,7 @@ class DashboardController extends Controller
         
         // Exemplo de como seria a lógica:
         $product = Product::all();
-        $sale = Sale::whereDate('venda_data', today())->get(); // Corrigido o nome do campo para 'venda_data' (antes estava como data_venda)
+        $sale = Sale::whereDate('data_venda', today())->get(); // Corrigido o nome do campo para 'data_venda' (antes estava como data_venda)
         
         return view('dashboard', compact('product', 'sale'));
         }
