@@ -7,6 +7,10 @@
     </x-slot>
 
     <style>
+        body {
+            font-family: arial;
+        }
+
         /* Layout */
         .dashboard {
             display: grid;
