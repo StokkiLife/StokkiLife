@@ -2,7 +2,8 @@
 aparece uma mensagem de erro se as credenciais estiverem incorretas. 
 Então, o usuario terá que registrar uma conta nova para ter acesso a dashboard.
 Porém, a conta registrada vai direto para o dashboard. --}}
-
+<title>Cadastro - StokkiLife</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">

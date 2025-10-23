@@ -6,6 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Stokki-Life') }}</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
         <!-- Fonts and Icons -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +17,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script src="https://unpkg.com/lucide@latest"></script>
     </head>
-    <body class="font-sans antialiased bg-gray-100">
-        <div class="min-h-screen bg-gray-100">
-            
+    <body class=" bg-gray-100">            
             <!-- Cabeçalho Principal -->
             <header class="bg-white border-b border-gray-200 sticky top-0 z-10">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,9 +25,8 @@
                         <div class="flex items-center gap-4">
                            
                             <!-- Para inserir a sua logo, substitua o <div> abaixo pela sua tag <img> -->
-                            <div class="w-12 h-12 bg-green-600 rounded-full"></div>
-
-                            <h1 class="text-2xl font-bold text-gray-800">{{ $header }}</h1>
+                            <img src="{{ asset('imgs/stokkilife-logo.png') }}" alt="StokkiLife Logo" class="h-10 w-10"/>
+                            <h1 class="text-2xl font-bold text-green-700">{{ $header }}</h1>
                         </div>
                         
                         <!-- Menu do Utilizador -->
@@ -71,7 +69,6 @@
                     {{ $slot }}
                 </div>
             </main>
-        </div>
         <script>
             lucide.createIcons();
         </script>

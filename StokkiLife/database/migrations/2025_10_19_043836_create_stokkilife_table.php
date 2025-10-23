@@ -32,12 +32,13 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('usuario', function (Blueprint $table) {
+        Schema::create('user', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('email')->unique()->index();
-            $table->string('senha');
+            $table->string('password');
             $table->timestamps();
-    });
+        });
     }
     /**
      * Reverse the migrations.

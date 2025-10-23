@@ -19,7 +19,7 @@ class LoginController extends Controller
         // Valida os dados da requisição (e-mail e senha)
         $credentials = $request->validate([
             'email' => ['required', 'email'],
-            'senha' => ['required'],
+            'password' => ['required'],
         ]);
 
         // Tenta autenticar o usuário
@@ -31,7 +31,7 @@ class LoginController extends Controller
 
         // Se a autenticação falhar, retorna um erro de credenciais inválidas
         return back()->withErrors([
-            'email' => 'These credentials do not match our records.',
+            'email' => 'Credenciais inválidas.',
         ])->onlyInput('email');
     }
 }

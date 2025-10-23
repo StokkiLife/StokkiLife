@@ -44,8 +44,16 @@ class SaleController extends Controller
     {
         // Lógica completa para salvar uma venda, dar baixa no stock, etc.
         DB::transaction(function () use ($request) {
-            // ... lógica aqui ...
-     });
-        return "Venda registada com sucesso! (Simulação)";
+            // Use $request data here
+            // Example: Sale::create($request->all());
+        });
+        return redirect()->route('sale.index')->with('success', 'Venda registada com sucesso!');
     }
-}
+
+    public function index()
+    {
+        // Lógica para listar todas as vendas (acessos)
+        $sale = Sale::with('item.product')->latest()->get();
+        return view('sale.index', compact('sale'));
+    }
+    }

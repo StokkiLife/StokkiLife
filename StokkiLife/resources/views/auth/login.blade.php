@@ -1,13 +1,10 @@
-<x-guest-layout>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('stylesheet/stokkilifeLogin.css') }}"> 
     <link rel="icon" href="{{ asset('imgs/stokkilife-logo.png') }}">
-
-
+    <title>Login - StokkiLife</title>
+<x-guest-layout>
     <body>
-    <div class="login-container">
+        <div class="login-container">
         <div class="login-logo">
-            <img src="{{ asset('imgs/stokkilife-logo.png') }}" alt="Logo">
         </div>
         <form method="POST" action="{{ route('login') }}">
             @csrf
