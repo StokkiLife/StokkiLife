@@ -3,7 +3,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 <x-app-layout>
-    <x-slot name="header" class="text-green-500">
+    <x-slot name="header" class="text-green-400">
         {{ __('StokkiLife') }}
     </x-slot>
 

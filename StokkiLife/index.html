@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Hover na Tag Article</title>
+    <style>
+        /* O CSS vai aqui */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Estilo básico para o artigo */
+        article {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            cursor: pointer; /* Indica que é interativo */
+            position: relative; /* Essencial para posicionar o popup */
+            max-width: 400px;
+        }
+
+        /* O elemento que contém as informações extras */
+        .info-extra {
+            /* Inicialmente, escondemos as informações */
+            display: none;
+            
+            /* Estilo para a caixa de informação flutuante */
+            position: absolute;
+            top: 0; /* Posição inicial (pode ajustar) */
+            left: 105%; /* Coloca a caixa à direita do article */
+            width: 250px;
+            padding: 10px;
+            border: 1px solid #007bff;
+            background-color: #e6f0ff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10; /* Garante que fique por cima de outros elementos */
+        }
+
+        /* A mágica: quando o mouse passa sobre o article, o .info-extra aparece */
+        article:hover .info-extra {
+            display: block; /* Torna o elemento visível */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Passe o mouse sobre o artigo</h1>
+
+    <article>
+        <h2>Título do Artigo</h2>
+        <p>Este é o conteúdo principal do seu artigo. Passe o mouse em qualquer lugar deste bloco para ver a informação extra.</p>
+        
+        <div class="info-extra">
+            <h3>Detalhes Adicionais</h3>
+            <ul>
+                <li>Autor: João da Silva</li>
+                <li>Data: 23/10/2025</li>
+                <li>Categoria: Tecnologia</li>
+                <li>Tempo de Leitura: 5 minutos</li>
+            </ul>
+        </div>
+    </article>
+
+    <article>
+        <h2>Outro Artigo</h2>
+        <p>Mais um bloco para testar o efeito de hover.</p>
+        
+        <div class="info-extra">
+            <h3>Mais Informações</h3>
+            <p>Este é o bloco de informações para o segundo artigo.</p>
+        </div>
+    </article>
+
+</body>
+</html>

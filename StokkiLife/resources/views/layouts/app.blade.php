@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="icon" href="{{ asset('imgs/stokkilife-logo.png') }}">
 
         <title>{{ config('app.name', 'Stokki-Life') }}</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -26,7 +27,7 @@
                            
                             <!-- Para inserir a sua logo, substitua o <div> abaixo pela sua tag <img> -->
                             <img src="{{ asset('imgs/stokkilife-logo.png') }}" alt="StokkiLife Logo" class="h-10 w-10"/>
-                            <h1 class="text-2xl font-bold text-green-700">{{ $header }}</h1>
+                            <h1 class="text-2xl font-bold text-lime-600">{{ $header }}</h1>
                         </div>
                         
                         <!-- Menu do Utilizador -->
