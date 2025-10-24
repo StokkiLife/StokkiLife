@@ -20,11 +20,11 @@
             </div>
         </div>
     </header>
-    
-    <main class="max-w-7xl mx-auto p-6">
+    <!-- Ainda não decidido -->
+    <!-- <main class="max-w-7xl mx-auto p-6">
     <article class="bg-white p-4 rounded-lg shadow-md mb-4"><i class="bi bi-folder-fill"></i></article>
     <article class="bg-white p-4 rounded-lg shadow-md mb-4"><i class="bi bi-folder-fill"></i></article>
-
+    -->
     </main>
 </body>
 </html>
